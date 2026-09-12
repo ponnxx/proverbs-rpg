@@ -26,7 +26,6 @@ bg:'backgrounds/Forest of Anger 1.jpg',
 emoji:'🌲',
 item:false,
 
-```
 questions:[
   {
     text:`
@@ -64,7 +63,6 @@ verse:`
   ${R('憤','いきどお')}りを とどめる。」—
   ${R('箴言','しんげん')}15:1
 `
-```
 
 },
 
@@ -77,7 +75,6 @@ bg:'backgrounds/Wayward Cave 1.jpg',
 emoji:'🕳️',
 item:true,
 
-```
 questions:[
   {
     text:`
@@ -117,7 +114,6 @@ verse:`
   ${R('主','しゅ')}に ${R('信頼','しんらい')}せよ。」—
   ${R('箴言','しんげん')}3:5
 `
-```
 
 },
 
@@ -130,7 +126,6 @@ bg:'backgrounds/Town of Temptation.jpg',
 emoji:'🏘️',
 item:false,
 
-```
 questions:[
   {
     text:`
@@ -169,7 +164,6 @@ verse:`
   ${R('正','ただ')}しいことを する
   ${R('心','こころ')}を ${R('大切','たいせつ')}に しよう。
 `
-```
 
 },
 
@@ -182,7 +176,6 @@ bg:'scenes/Fork in the road.jpg',
 emoji:'🛤️',
 item:false,
 
-```
 questions:[
   {
     text:`
@@ -223,7 +216,6 @@ verse:`
   まっすぐにされる。」—
   ${R('箴言','しんげん')}3:6
 `
-```
 
 }
 ];
@@ -238,13 +230,11 @@ const bossQuestions=[
 text:`       👿「${R('自分','じぶん')}だけで ${R('決','き')}めれば いいよ！」<br>       <b>どうする？</b>
     `,
 
-```
 choices:[
   [`「そうだね！」と、すぐに ${R('決','き')}める`,false],
   [`ちょっと ${R('待','ま')}って、おいのりして ${R('考','かんが')}える`,true],
   [`${R('友','とも')}だちに ぜんぶ ${R('決','き')}めてもらう`,false]
 ]
-```
 
 },
 
@@ -253,13 +243,11 @@ text:`       👿「みんなが やってるよ！<br>
       だから ${R('自分','じぶん')}も やっていいよ！」<br>       <b>どうする？</b>
     `,
 
-```
 choices:[
   [`みんなが やっていても、${R('正','ただ')}しいか ${R('考','かんが')}える`,true],
   [`みんなが やっているなら、やってみる`,false],
   [`なにも ${R('考','かんが')}えずに にげる`,false]
 ]
-```
 
 },
 
@@ -268,13 +256,11 @@ text:`       👿「${R('祈','いの')}らなくても、
       ${R('自分','じぶん')}で わかるでしょ？」<br>       <b>さいごに、どうする？</b>
     `,
 
-```
 choices:[
   [`${R('自分','じぶん')}の ${R('知識','ちしき')}だけを ${R('信頼','しんらい')}する`,false],
   [`${R('祈','いの')}って ${R('主','しゅ')}を ${R('信頼','しんらい')}してから、${R('自分','じぶん')}でも ${R('考','かんが')}える`,true],
   [`${R('友','とも')}だちが ${R('決','き')}めるまで ${R('待','ま')}つ`,false]
 ]
-```
 
 }
 ];
@@ -291,28 +277,20 @@ hp.textContent=
 
 if(state.stageIndex===0){
 
-```
 stage.textContent='ぼうけんの はじまり';
-```
 
 }else if(state.stageIndex<=4){
 
-```
 stage.innerHTML=
   stages[state.stageIndex-1].name;
-```
 
 }else if(state.stageIndex===5){
 
-```
 stage.textContent='まよわせモンスター';
-```
 
 }else{
 
-```
 stage.textContent='クリア';
-```
 
 }
 }
@@ -337,7 +315,6 @@ screen.querySelector('.choices');
 
 buttons.forEach(x=>{
 
-```
 const b=document.createElement('button');
 
 // HTMLとして表示する
@@ -346,7 +323,6 @@ b.innerHTML=x.t;
 b.onclick=x.f;
 
 box.appendChild(b);
-```
 
 });
 
@@ -381,7 +357,6 @@ state.key=false;
 
 render(
 
-```
 `
 <div class="emoji">🛤️✨</div>
 
@@ -414,8 +389,7 @@ render(
   }
 ],
 
-'Starting Field.jpg'
-```
+'backgrounds/Starting Field.jpg'
 
 );
 }
@@ -451,7 +425,6 @@ shuffledChoices(q.choices);
 
 render(
 
-```
 `
 <div class="emoji">${s.emoji}</div>
 
@@ -473,7 +446,6 @@ choices.map(choice=>({
 })),
 
 s.bg
-```
 
 );
 }
@@ -493,7 +465,6 @@ stages[state.stageIndex-1];
 
 if(ok){
 
-```
 state.hp=
   Math.min(5,state.hp+1);
 
@@ -537,7 +508,6 @@ if(
 stageClear();
 
 return;
-```
 
 }
 
@@ -550,7 +520,6 @@ Math.max(1,state.hp-1);
 
 render(
 
-```
 `
 <div class="emoji">💭</div>
 
@@ -584,7 +553,6 @@ render(
 ],
 
 s.bg
-```
 
 );
 }
@@ -600,9 +568,7 @@ stages[state.stageIndex-1];
 
 if(s.item){
 
-```
 state.key=true;
-```
 
 }
 
@@ -612,7 +578,6 @@ stages.length;
 
 render(
 
-```
 `
 <div class="emoji">✨</div>
 
@@ -667,7 +632,6 @@ ${
 ],
 
 s.bg
-```
 
 );
 }
@@ -695,7 +659,6 @@ shuffledChoices(q.choices);
 
 render(
 
-```
 `
 <div class="emoji">👿</div>
 
@@ -728,7 +691,6 @@ choices.map(choice=>({
 })),
 
 'monsters/Last Boss.jpeg'
-```
 
 );
 }
@@ -741,7 +703,6 @@ function bossAnswer(ok){
 
 if(ok){
 
-```
 state.hp=
   Math.min(5,state.hp+1);
 
@@ -789,7 +750,6 @@ if(
 clear();
 
 return;
-```
 
 }
 
@@ -802,7 +762,6 @@ Math.max(1,state.hp-1);
 
 render(
 
-```
 `
 <div class="emoji">💭</div>
 
@@ -831,7 +790,6 @@ render(
 ],
 
 'monsters/Last Boss.jpeg'
-```
 
 );
 }
@@ -847,7 +805,6 @@ state.hp=5;
 
 render(
 
-```
 `
 <div class="emoji">
   ✨🛤️✨
@@ -911,7 +868,6 @@ render(
 ],
 
 'scenes/Straight Path.jpg'
-```
 
 );
 }
@@ -926,7 +882,6 @@ state.stageIndex=7;
 
 render(
 
-```
 `
 <div class="emoji">
   🏠👨‍👩‍👧‍👦
@@ -973,7 +928,6 @@ render(
     f:end
   }
 ]
-```
 
 );
 }
@@ -986,7 +940,6 @@ function familyQ(){
 
 render(
 
-```
 `
 <div class="emoji">🤔</div>
 
@@ -1024,7 +977,6 @@ render(
     f:end
   }
 ]
-```
 
 );
 }
@@ -1037,7 +989,6 @@ function end(){
 
 render(
 
-```
 `
 <div class="emoji">
   🙏✨
@@ -1067,7 +1018,6 @@ render(
     f:title
   }
 ]
-```
 
 );
 }
