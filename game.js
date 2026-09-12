@@ -361,8 +361,8 @@ function shuffledChoices(choices){
 
 return choices
 .map(choice=>({
-t:choice,
-ok:choice
+t:choice[0],
+ok:choice[1]
 }))
 .sort(()=>Math.random()-0.5);
 
