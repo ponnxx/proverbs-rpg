@@ -1,1 +1,35 @@
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:#17233b;color:#172033}body{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:12px}.hud{width:min(900px,100%);position:fixed;top:8px;display:flex;justify-content:space-between;color:#fff;font-size:20px;font-weight:800;z-index:5}#app{width:min(900px,100%)}#screen{min-height:92vh;border-radius:24px;padding:clamp(18px,5vw,44px);background:#fff;box-shadow:0 12px 40px #0005;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background-size:cover;background-position:center}.panel{background:#fffc;border-radius:20px;padding:24px;text-align:center}h1{font-size:clamp(32px,8vw,60px);margin:8px 0 18px}h2{font-size:clamp(26px,6vw,42px);margin:8px 0 18px}p{font-size:clamp(18px,4.5vw,25px);line-height:1.6}.emoji{font-size:80px}.quote{background:#fff8df;border-left:6px solid #d59a2a;border-radius:10px;padding:16px;margin:18px 0;font-size:clamp(17px,4vw,22px);font-weight:700}.choices{display:grid;gap:12px;margin-top:18px}button{border:0;border-radius:15px;padding:15px 18px;min-height:60px;background:#315f8c;color:#fff;font-size:clamp(18px,4.5vw,24px);font-weight:800;cursor:pointer;box-shadow:0 4px 0 #0003}button:active{transform:translateY(3px);box-shadow:0 1px 0 #0003}button.primary{background:#c88920}.good{background:#3a9362!important}.bad{background:#c45656!important}.item{display:inline-block;padding:9px 15px;background:#fff0b4;border-radius:99px;font-weight:800}.small{font-size:15px;opacity:.75}@media(max-height:650px){#screen{min-height:96vh}.emoji{font-size:55px}p{margin:6px 0}button{min-height:48px;padding:10px 14px}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:#17233b;color:#172033}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:12px}
+.hud{width:min(900px,100%);position:fixed;top:8px;display:flex;justify-content:space-between;color:#fff;font-size:20px;font-weight:800;z-index:5}
+#app{width:min(900px,100%)}
+#screen{min-height:92vh;border-radius:24px;padding:clamp(18px,5vw,44px);background:#fff;box-shadow:0 12px 40px #0005;display:flex;flex-direction:column;justify-content:center;overflow:hidden;background-size:cover;background-position:center}
+
+.panel{
+  background:rgba(255,255,255,.38);
+  border-radius:20px;
+  padding:24px;
+  text-align:center;
+  backdrop-filter:blur(2px);
+}
+
+h1{font-size:clamp(32px,8vw,60px);margin:8px 0 18px}
+h2{font-size:clamp(26px,6vw,42px);margin:8px 0 18px}
+p{font-size:clamp(18px,4.5vw,25px);line-height:1.6}
+.emoji{font-size:80px}
+.quote{background:#fff8df;border-left:6px solid #d59a2a;border-radius:10px;padding:16px;margin:18px 0;font-size:clamp(17px,4vw,22px);font-weight:700}
+.choices{display:grid;gap:12px;margin-top:18px}
+button{border:0;border-radius:15px;padding:15px 18px;min-height:60px;background:#315f8c;color:#fff;font-size:clamp(18px,4.5vw,24px);font-weight:800;cursor:pointer;box-shadow:0 4px 0 #0003}
+button:active{transform:translateY(3px);box-shadow:0 1px 0 #0003}
+button.primary{background:#c88920}
+.good{background:#3a9362!important}
+.bad{background:#c45656!important}
+.item{display:inline-block;padding:9px 15px;background:#fff0b4;border-radius:99px;font-weight:800}
+.small{font-size:15px;opacity:.75}
+
+@media(max-height:650px){
+  #screen{min-height:96vh}
+  .emoji{font-size:55px}
+  p{margin:6px 0}
+  button{min-height:48px;padding:10px 14px}
+}
